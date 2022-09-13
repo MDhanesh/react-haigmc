@@ -1,14 +1,20 @@
-import React from 'react';
-export default function Navigations(props) {
+import React, { useContext } from 'react';
+// import { CounterDataContext } from './App';
+function Navigations() {
+  //const [initialValue, setInitialValue] = useState(0);
+  // console.log(props.initialValue);
+  ////////////////
+  // const consumedValues = useContext(CounterDataContext);
+  //console.log(consumedValues.initialValueFromProvider);
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-          <a class="navbar-brand" href="#!">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container px-4 px-lg-5">
+          <a className="navbar-brand" href="#!">
             Start Bootstrap
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -16,23 +22,23 @@ export default function Navigations(props) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#!">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#!">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!">
+              <li className="nav-item">
+                <a className="nav-link" href="#!">
                   About
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdown"
                   href="#"
                   role="button"
@@ -41,34 +47,34 @@ export default function Navigations(props) {
                 >
                   Shop
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#!">
+                    <a className="dropdown-item" href="#!">
                       All Products
                     </a>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#!">
+                    <a className="dropdown-item" href="#!">
                       Popular Items
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#!">
+                    <a className="dropdown-item" href="#!">
                       New Arrivals
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex">
-              <button class="btn btn-outline-dark" type="submit">
-                <i class="bi-cart-fill me-1"></i>
+            <form className="d-flex">
+              <button className="btn btn-outline-dark" type="submit">
+                <i className="bi-cart-fill me-1"></i>
                 Cart
-                <span class="badge bg-dark text-white ms-1 rounded-pill">
-                  {props.initialValue}
+                <span className="badge bg-dark text-white ms-1 rounded-pill">
+                  {/* {consumedValues.initialValueFromProvider} */}
                 </span>
               </button>
             </form>
@@ -78,3 +84,4 @@ export default function Navigations(props) {
     </>
   );
 }
+export default Navigations;

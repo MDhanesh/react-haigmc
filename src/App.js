@@ -6,7 +6,9 @@ import Card from './card';
 import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React, { createContext } from 'react';
 
+export const CounterDataContext = createContext();
 export default function App() {
   return (
     <div>
